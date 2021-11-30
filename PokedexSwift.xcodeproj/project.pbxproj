@@ -11,6 +11,8 @@
 		FC16BBCC2756E69900DAA0BD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16BBCB2756E69900DAA0BD /* ContentView.swift */; };
 		FC16BBCE2756E69A00DAA0BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16BBCD2756E69A00DAA0BD /* Assets.xcassets */; };
 		FC16BBD12756E69A00DAA0BD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC16BBD02756E69A00DAA0BD /* Preview Assets.xcassets */; };
+		FC16BBDC2756E88A00DAA0BD /* PokemonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16BBDB2756E88A00DAA0BD /* PokemonCell.swift */; };
+		FC16BBDE2756ED8E00DAA0BD /* PokedexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC16BBDD2756ED8E00DAA0BD /* PokedexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		FC16BBCB2756E69900DAA0BD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FC16BBCD2756E69A00DAA0BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC16BBD02756E69A00DAA0BD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FC16BBDB2756E88A00DAA0BD /* PokemonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCell.swift; sourceTree = "<group>"; };
+		FC16BBDD2756ED8E00DAA0BD /* PokedexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokedexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 		FC16BBD82756E74A00DAA0BD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC16BBDB2756E88A00DAA0BD /* PokemonCell.swift */,
+				FC16BBDD2756ED8E00DAA0BD /* PokedexView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +169,8 @@
 			files = (
 				FC16BBCC2756E69900DAA0BD /* ContentView.swift in Sources */,
 				FC16BBCA2756E69900DAA0BD /* PokedexSwiftApp.swift in Sources */,
+				FC16BBDC2756E88A00DAA0BD /* PokemonCell.swift in Sources */,
+				FC16BBDE2756ED8E00DAA0BD /* PokedexView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
