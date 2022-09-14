@@ -13,19 +13,46 @@ class PokemonViewModel: ObservableObject {
     
     init() {
         fetchPokemon()
+        print(pokemon)
     }
     
     func fetchPokemon() {
         guard let url = URL(string: baseUrl) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data?.parseData(removeString: "null") else { return }
+        URLSession.shared.dataTask(with: url) { data, _, _ in
+            guard let data = data?.parseData(removeString: "null,") else { return }
             guard let pokemon = try? JSONDecoder().decode([Pokemon].self, from: data) else { return }
             
             DispatchQueue.main.async {
                 self.pokemon = pokemon
             }
         }.resume()
+    }
+    
+    func backgroundColor(forType type: String) -> UIColor {
+        switch type {
+            case "fire": return .systemRed
+            case "poison": return .systemGreen
+            case "water": return .systemTeal
+            case "electric": return .systemYellow
+            case "psychic": return .systemPurple
+            case "normal": return .systemOrange
+            case "ground": return .systemGray
+            case "flying": return .systemBlue
+            case "fairy": return .systemPink
+            default: return .systemIndigo
+        }
+    }
+    
+    func filterPokemon(pokemonName: String) -> [Pokemon] {
+        if pokemonName.isEmpty {
+            return pokemon
+        } else {
+            return pokemon.filter {
+                $0.name
+                    .localizedCaseInsensitiveContains(pokemonName)
+            }
+        }
     }
 }
 
